@@ -1,212 +1,79 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tesla landing page</title>
+function Header() {
+  return (
+    <header>
+      <h2>EV Motors</h2>
+      <p>Home | Vehicles | Contact</p>
+    </header>
+  );
+}
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+function Hero() {
+  return (
+    <section>
+      <h1>Welcome to EV Motors</h1>
+      <p>Find the electric car that is right for you.</p>
+      <button>Learn More</button>
+    </section>
+  );
+}
 
-    body {
-      font-family: Arial, sans-serif;
-      color: #171a20;
-    }
+function ProductCard() {
+  return (
+    <div>
+      <h3>Model 3</h3>
+      <p>Starting at $38,990</p>
+      <button>View Car</button>
+    </div>
+  );
+}
 
-    
-    header {
-      height: 64px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 40px;
-      background: white;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
+function ProductGrid() {
+  return (
+    <section>
+      <h2>Our Vehicles</h2>
+      <ProductCard />
+      <ProductCard />
+      <ProductCard />
+    </section>
+  );
+}
 
-    .logo {
-      font-size: 24px;
-      font-weight: bold;
-      text-decoration: none;
-      color: black;
-    }
+function TechnologySection() {
+  return (
+    <section>
+      <h2>Our Technology</h2>
+      <p>Our cars use modern electric technology.</p>
+    </section>
+  );
+}
 
-    nav {
-      display: flex;
-      gap: 30px;
-    }
+function QuestionBox() {
+  return (
+    <section>
+      <h2>Ask a Question</h2>
+      <input type="text" placeholder="Write your question" />
+      <button>Send</button>
+    </section>
+  );
+}
 
-    nav a {
-      text-decoration: none;
-      color: #171a20;
-      font-size: 14px;
-    }
+function Footer() {
+  return (
+    <footer>
+      <p>Copyright 2026 EV Motors</p>
+    </footer>
+  );
+}
 
-    .icon-rail {
-      display: flex;
-      gap: 10px;
-    }
-
-    .icon-button {
-      width: 40px;
-      height: 40px;
-      border: none;
-      border-radius: 50%;
-      background: transparent;
-      cursor: pointer;
-      font-size: 18px;
-    }
-
-    .icon-button:hover {
-      background: #eee;
-    }
-
-    
-    .hero {
-      height: 650px;
-      background: url("https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8")
-        center / cover;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
-    }
-
-    .hero-content h1 {
-      font-size: 48px;
-      margin-bottom: 15px;
-    }
-
-    .hero-content p {
-      font-size: 20px;
-      margin-bottom: 25px;
-    }
-
-    .buttons {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-    }
-
-    .button {
-      padding: 14px 30px;
-      border: none;
-      border-radius: 30px;
-      cursor: pointer;
-      font-size: 15px;
-    }
-
-    .primary {
-      background: white;
-      color: black;
-    }
-
-    .secondary {
-      background: rgba(255, 255, 255, 0.8);
-      color: black;
-    }
-
-    
-    .products {
-      padding: 70px 40px;
-    }
-
-    .products h2 {
-      text-align: center;
-      margin-bottom: 40px;
-      font-size: 36px;
-    }
-
-    .product-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
-    }
-
-    .product-card {
-      border-radius: 15px;
-      overflow: hidden;
-      background: #f5f5f5;
-    }
-
-    .product-card img {
-      width: 100%;
-      height: 250px;
-      object-fit: cover;
-    }
-
-    .product-info {
-      padding: 20px;
-    }
-
-    .product-info h3 {
-      margin-bottom: 10px;
-    }
-
-    
-    .feature-banner {
-      padding: 80px;
-      background: #eee;
-      text-align: center;
-    }
-
-    .feature-banner h2 {
-      font-size: 36px;
-      margin-bottom: 15px;
-    }
-
-    
-    footer {
-      padding: 50px 40px;
-      background: #171a20;
-      color: white;
-      text-align: center;
-    }
-
-    
-    .floating-bar {
-      position: fixed;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      gap: 10px;
-      background: white;
-      padding: 8px;
-      border-radius: 40px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-      z-index: 200;
-    }
-
-    .chat-input {
-      border: none;
-      outline: none;
-      padding: 12px 20px;
-      border-radius: 30px;
-      width: 250px;
-    }
-
-    .schedule-button {
-      border: none;
-      border-radius: 30px;
-      padding: 12px 20px;
-      cursor: pointer;
-    }
-  </style>
-</head>
-
-<body>
-
-
-  <div id="root"></div>
-
-
-</body>
-</html>
+export default function App() {
+  return (
+    <div>
+      <Header />
+      <Hero />
+      <ProductGrid />
+      <TechnologySection />
+      <QuestionBox />
+      <Footer />
+    </div>
+  );
+}
